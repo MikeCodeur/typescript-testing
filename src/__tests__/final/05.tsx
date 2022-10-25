@@ -2,12 +2,12 @@
 
 import * as React from 'react'
 import Hello from '../../components/hello'
-import {render, fireEvent} from '@testing-library/react'
+import {render, fireEvent, screen} from '@testing-library/react'
 
 test('Affiche "Bonjour John" et "Merci" lors d\'un click" ', () => {
-  const {container} = render(<Hello name="John" />)
-  const envoyer = container.querySelector('input')
-  const label = (container?.firstChild as HTMLElement).querySelector('div')
+  render(<Hello name="John" />)
+  const envoyer = screen.getByRole('button', {name: /envoyer/i})
+  const label = screen.getByRole('status')
 
   expect(label?.textContent).toBe(`Bonjour John`)
   fireEvent.click(envoyer as Element)

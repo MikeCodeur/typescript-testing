@@ -25,7 +25,7 @@ describe('DataBaseConnexion:add', () => {
   })
 })
 
-describe('DataBaseConnexion.getInstance():addElements', () => {
+describe('DataBaseConnexion:addElements', () => {
   test('devrait avoir une taille de 2', () => {
     DataBaseConnexion.getInstance().addElements(['first', 'second'])
     expect(DataBaseConnexion.getInstance().getSize()).toBe(2)
