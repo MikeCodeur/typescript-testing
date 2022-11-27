@@ -9,7 +9,7 @@ const fileName = '01.ts'
 function App() {
   return (
     <div>
-      <div>Simple test de fonctions</div>
+      <Hello name='John' />
       <hr />
       <HowToTests solution={false} fileName={fileName} />
     </div>
